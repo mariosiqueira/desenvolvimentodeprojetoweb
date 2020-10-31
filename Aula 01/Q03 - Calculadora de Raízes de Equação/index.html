@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <link rel="stylesheet" href="style.css">
+        <title>Q03 - Calculadora de Equação do 2° Grau</title>
+    </head>
+    <body>
+        <main>
+            <h1>Q03 - Calculadora de Equação do 2° Grau</h1>
+            <h2>Equação do 2° Grau: ax² + bx + c = 0</h3>
+            <div id="formgroup">
+                <form>
+                    <label for="a">Coeficiente a</label>
+                    <input type="text" id="a" name="a" placeholder="Digite o valor do coeficiente a">
+                    <label for="b">Coeficiente b</label>
+                    <input type="text" id="b" name="b" placeholder="Digite o valor do coeficiente b">
+                    <label for="c">Coeficiente c</label>
+                    <input type="text" id="c" name="c" placeholder="Digite o valor do coeficiente c">
+                    <a onclick="calcularRaizes()">Calcular Raízes</a>
+                </form>
+            </div>
+            <div>
+                <h3>Valor do Discriminante Δ:</h3>
+                <div id="delta">
+
+                </div>
+                <h3>Raízes da Equação:</h3>
+                <div id="raizes">
+
+                </div>
+            </div>
+
+            <div id="model">
+                <p></p>
+            </div>
+        </main>
+        <script src="script.js"></script>
+    </body>
+</html>

@@ -1,0 +1,22 @@
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main nav ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+
+main nav ul li{
+    margin-left: 16px;
+}
+
+main ul li a{
+    text-decoration: none;
+    font-weight: bold;
+}

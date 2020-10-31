@@ -1,0 +1,1 @@
+Este repositório contém os códigos fontes das atividades propostas na disciplina de Desenvolvimento de Projeto WEB do Curso de Licenciatura em Computação do IFPE - Campus Afogados.

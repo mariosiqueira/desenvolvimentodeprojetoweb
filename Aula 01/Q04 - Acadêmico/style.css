@@ -1,0 +1,75 @@
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#formgroup label{
+    display: block;
+    font-size: 16px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+#formgroup label, #formgroup input{
+    cursor: pointer;
+}
+
+#formgroup input{
+    padding: 8px;
+    min-width: 200px;
+}
+
+#formgroup a{
+    display: block;
+    margin: auto;
+    text-align: center;
+    margin-top: 16px;
+    padding: 12px 4px;
+    background-color: #28a745;
+    border-radius: 4px;
+    color: #FFF;
+    cursor: pointer;
+}
+
+#formgroup a:hover{
+    background-color: #1f8a38;
+}
+
+table{
+    margin-top: 16px;
+    width: 70%;
+
+}
+
+table caption{
+    margin-top: 16px;
+    margin-bottom: 16px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+table, th, td{
+   border-bottom: 1px solid black;
+   border-collapse: collapse;
+   padding: 8px;
+}
+
+table td{
+    text-align: center;
+
+}
+
+table tr:nth-child(even){
+    background-color: #EEE;
+}
+
+table tr:hover{
+    background-color: #8efaa7;
+}
+
+#model{
+    display: none;
+}
