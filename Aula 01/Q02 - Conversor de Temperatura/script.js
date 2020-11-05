@@ -13,18 +13,16 @@ function removerNodes(){
 function converter(){
     removerNodes();
     let celsius = parseFloat(document.getElementById('temperatura').value);
+    celsius = (celsius) ? celsius : 0;
     let fahrenheit = celsiusParaFahrenheit(celsius);
     let kelvin = celsiusParaKelvin(celsius);
-
     
-    if(celsius){
-        let nodePFahrenheit = document.querySelector('#model p').cloneNode(true);
-        nodePFahrenheit.innerHTML = 'Temperatura em Fahrenheit: ' + ` ${fahrenheit.toFixed(2)}` + ' F';
-        document.getElementById('result').appendChild(nodePFahrenheit);
+    let nodePFahrenheit = document.querySelector('#model p').cloneNode(true);
+    nodePFahrenheit.innerHTML = 'Temperatura em Fahrenheit: ' + ` ${fahrenheit.toFixed(2)}` + ' F';
+    document.getElementById('result').appendChild(nodePFahrenheit);
 
-        let nodePKelvin = document.querySelector('#model p').cloneNode(true);
-        nodePKelvin.innerHTML = 'Temperatura em Kelvin: ' + ` ${kelvin.toFixed(2)}` + ' K';
-        document.getElementById('result').appendChild(nodePKelvin);
-    }
+    let nodePKelvin = document.querySelector('#model p').cloneNode(true);
+    nodePKelvin.innerHTML = 'Temperatura em Kelvin: ' + ` ${kelvin.toFixed(2)}` + ' K';
+    document.getElementById('result').appendChild(nodePKelvin);
     
 }
