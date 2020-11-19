@@ -1,0 +1,1 @@
+Os exercícios devem ser executados em um servidor web (como o apache por exemplo) para que as requisições Ajax sejam executadas. 

@@ -1,0 +1,13 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#text-container{
+    max-width: 900px;
+    min-height: 400px;
+    background-color: #eee;
+    margin-bottom: 16px;
+    color: black;
+    overflow: auto;
+}
