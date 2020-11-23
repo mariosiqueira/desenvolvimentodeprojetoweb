@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Cat Walk</title>
+</head>
+<body data-gr-c-loaded="true">
+  <img style="position: absolute; left: 0px" src="cat.gif">
+  <script>
+    var img = document.getElementsByTagName('img')[0];
+    var walkForwards = true;
+
+    function loadCurrentLeft(){
+        return (localStorage.getItem('pos')) ? parseInt(localStorage.getItem('pos')) : parseInt(img.style.left);
+    }
+
+    function catWalk() {
+      let currentLeft = loadCurrentLeft();
+      walkForwards = JSON.parse(localStorage.getItem('walkForwards'));
+    
+      if (walkForwards && (currentLeft > (window.innerWidth-img.width))) {
+        walkForwards = false;
+      }
+      if (!walkForwards && (currentLeft <= 0)) {
+        walkForwards = true;
+      }
+      
+      if (walkForwards) {
+        img.style.left = (currentLeft + 10) + 'px';
+      } else {
+        img.style.left = (currentLeft - 10) + 'px';
+      }
+
+      localStorage.setItem('pos', img.style.left);
+      localStorage.setItem('walkForwards', walkForwards);
+    //   console.log(localStorage.getItem('pos'));
+    //   console.log(loadWalkForwards())
+    }
+    window.setInterval(catWalk, 30);
+</script>
+</body>
+</html>

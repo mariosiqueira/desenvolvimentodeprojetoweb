@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mad Libs</title>
+</head>
+	<body data-gr-c-s-loaded="true">
+ 
+ 		<h1>Mad Libs</h1>
+ 
+		 <ul>
+		  <li>Noun: <input type="text" id="noun">
+		  </li><li>Adjective: <input type="text" id="adjective">
+		  </li><li>Someone's Name: <input type="text" id="name">
+		 </li></ul>
+		   
+         <button id="lib-button">Lib it!</button><div id="story"></div>
+         <div id="libs-saved">
+             <h2>Libs:</h2>
+             <div id="itens"></div>
+             
+         </div>
+         <button id="diplayAll-button">Display all</button>
+		  <script>
+		  	// localStorage.clear();
+            var arr = new Array();
+            if(localStorage.getItem('arr')){
+                arr = JSON.parse(localStorage.getItem('arr'))
+            }
+			function libIt() {
+			  var storyDiv = document.getElementById("story");
+			  var name = document.getElementById("name").value;
+			  var adjective = document.getElementById("adjective").value;
+			  var noun = document.getElementById("noun").value;
+			  var storyTold = name + " married a " + adjective + " " + noun + "... So weird!";
+			  arr.push(storyTold);
+              storyDiv.innerHTML = storyTold;
+
+              localStorage.setItem('arr', JSON.stringify(arr));
+            }
+            
+            function tellAll() {
+                //TO DO
+                let divLibs = document.getElementById('itens');
+                divLibs.innerHTML = '';
+                let arrayLibs = JSON.parse(localStorage.getItem('arr'));
+                for(let i in arrayLibs){
+                    let node = document.createElement("p");
+                    let textNode = document.createTextNode(`${arrayLibs[i]}`);
+                    node.appendChild(textNode);
+
+                    document.getElementById('itens').appendChild(node);
+                }
+			}
+
+				var libButton = document.getElementById('lib-button');
+                libButton.addEventListener('click', libIt);
+                
+                var displayAllButton = document.getElementById('diplayAll-button');
+                displayAllButton.addEventListener('click', tellAll);
+			
+			</script>
+
+ 
+</body>
+</html>
